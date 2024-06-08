@@ -8,5 +8,13 @@ import java.util.ArrayList;
 
 @ConfigurationProperties(prefix = "itotdel")
 public class ItotdelConfig {
-    private ArrayList<Member> Members;
+    private ArrayList<Member> members;
+
+    public ArrayList<Member> getMembers() {
+        return members;
+    }
+
+    public void setMembers(ArrayList<Member> members) {
+        this.members = members;
+    }
 }

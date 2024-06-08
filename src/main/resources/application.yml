@@ -31,5 +31,5 @@ itotdel:
       stream: backend developer
     - name: test
       last_name: test
-      age: test
-      stream: test
+      age: 12
+      stream: pozer
