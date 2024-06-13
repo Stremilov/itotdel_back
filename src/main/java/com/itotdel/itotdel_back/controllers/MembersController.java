@@ -3,6 +3,7 @@ package com.itotdel.itotdel_back.controllers;
 
 import com.itotdel.itotdel_back.configuration.ItotdelConfig;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,8 +22,7 @@ public class MembersController {
     }
 
     @GetMapping("/members")
-    public ItotdelConfig getMembers() {
-        System.out.print(itotdelConfig);
-        return itotdelConfig;
+    public ResponseEntity getMembers() {
+        return ResponseEntity.ok(itotdelConfig.getMembers());
     }
 }
