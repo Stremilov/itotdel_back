@@ -12,11 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("")
 @RequiredArgsConstructor
 public class MembersController {
 
     private final ItotdelConfig itotdelConfig;
+
+    @GetMapping("/")
+    public String mainPage() {
+        return "ok";
+    }
 
     @GetMapping("/members")
     public ResponseEntity getMembers() {
